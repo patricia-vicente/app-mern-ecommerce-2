@@ -4,6 +4,9 @@ import { Grid, Paper, TextField, Typography, Button } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = baseURL;
+
 const UpdateProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();

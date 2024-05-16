@@ -3,6 +3,10 @@ import { Grid, Paper, TextField, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
+const baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = baseURL;
+
 const AddProduct = () => {
   // Use the useNavigate hook from react-router-dom to get the navigate function
   const navigate = useNavigate();
